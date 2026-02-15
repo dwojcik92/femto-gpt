@@ -10,7 +10,7 @@ The project has three implementations:
 
 1. `microgpt.py` - canonical reference implementation.
 2. `femtogpt.py` - shortest valid implementation (strict parity target).
-3. `picogpt.py` - rival implementation.
+3. `picogpt.py` - imported baseline from Remek (Remigiusz Kinas).
 
 To be considered fully valid in this repo, an implementation must match `microgpt.py` output as a complete log, not only selected metrics.
 
@@ -30,9 +30,17 @@ The model is intentionally minimal and deterministic (fixed random seed), so exa
 
 1. `microgpt.py`: readable baseline, full comments, explicit architecture.
 2. `femtogpt.py`: compressed standalone implementation using Python metaprogramming (`exec` over compressed payload).
-3. `picogpt.py`: heavily golfed rival implementation.
+3. `picogpt.py`: heavily golfed implementation from Remek's `rkinas/pico-gpt2` repository.
 4. `compare_runs.sh`: benchmark/equivalence harness.
 5. `run_results/<timestamp>/`: logs, extracted traces, diffs, and summary.
+
+## Upstream attribution
+
+`picogpt.py` in this repository comes from:
+
+1. Author: Remigiusz Kinas (Remek)
+2. Repository: `rkinas/pico-gpt2`
+3. URL: https://github.com/rkinas/pico-gpt2
 
 ## Benchmark and validation protocol
 
@@ -62,11 +70,13 @@ From `run_results/20260215_114425/summary.txt`:
    2. `loss trace match: yes`
    3. `sample output match: yes`
 
-Source sizes:
+Character counts:
 
-1. `microgpt.py`: 9165 bytes
-2. `picogpt.py`: 1997 bytes
-3. `femtogpt.py`: 2530 bytes (1298 characters)
+| File | Characters |
+| --- | ---: |
+| `microgpt.py` | 9165 |
+| `picogpt.py` | 1997 |
+| `femtogpt.py` | 1298 |
 
 Note: the current `femtogpt.py` is optimized for character count using high-Unicode payload encoding. It is below 1500 characters, but not below 2000 bytes.
 
