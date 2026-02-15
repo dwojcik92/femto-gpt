@@ -1,0 +1,35 @@
+Output directory: /Users/dwojcik/dev/femto-gpt/run_results/20260215_112157
+Python interpreter: python
+
+microgpt status=0 elapsed=67s
+femtogpt status=0 elapsed=46s
+picogpt status=0 elapsed=87s
+
+num docs:    micro=32033 femto=32033 pico=
+vocab size:  micro=27 femto=27 pico=
+num params:  micro=4192 femto=4192 pico=
+
+first loss:  micro=3.3660 femto=3.3660 pico=3.3660
+last loss:   micro=2.6497 femto=2.6497 pico=2.6497
+step count:  micro=1000 femto=1000 pico=1000
+sample count: micro=20 femto=20 pico=20
+
+femtogpt vs microgpt:
+- full log match: yes
+- loss trace match: yes
+- sample output match: yes
+
+picogpt vs microgpt:
+- full log match: no
+- loss trace match: yes
+- sample output match: yes
+
+Logs:
+- /Users/dwojcik/dev/femto-gpt/run_results/20260215_112157/microgpt.log
+- /Users/dwojcik/dev/femto-gpt/run_results/20260215_112157/femtogpt.log
+- /Users/dwojcik/dev/femto-gpt/run_results/20260215_112157/picogpt.log
+Diffs:
+- /Users/dwojcik/dev/femto-gpt/run_results/20260215_112157/losses.diff
+- /Users/dwojcik/dev/femto-gpt/run_results/20260215_112157/samples.diff
+- /Users/dwojcik/dev/femto-gpt/run_results/20260215_112157/pico_losses.diff
+- /Users/dwojcik/dev/femto-gpt/run_results/20260215_112157/pico_samples.diff
