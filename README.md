@@ -66,7 +66,9 @@ Source sizes:
 
 1. `microgpt.py`: 9165 bytes
 2. `picogpt.py`: 1997 bytes
-3. `femtogpt.py`: 1654 bytes
+3. `femtogpt.py`: 2530 bytes (1298 characters)
+
+Note: the current `femtogpt.py` is optimized for character count using high-Unicode payload encoding. It is below 1500 characters, but not below 2000 bytes.
 
 ## Why `picogpt.py` is not valid under strict parity
 
@@ -95,4 +97,3 @@ For this repo's rules, that makes `picogpt.py` non-valid as a drop-in replacemen
 ```
 
 Outputs are written to `run_results/<timestamp>/` and summarized in `summary.txt`.
-
