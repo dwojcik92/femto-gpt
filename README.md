@@ -97,3 +97,43 @@ For this repo's rules, that makes `picogpt.py` non-valid as a drop-in replacemen
 ```
 
 Outputs are written to `run_results/<timestamp>/` and summarized in `summary.txt`.
+
+# Results:
+
+```bash
+Output directory: /Users/dwojcik/Dev/femto-gpt/run_results/20260215_134025
+Python interpreter: python
+
+microgpt status=0 elapsed=59s
+femtogpt status=0 elapsed=76s
+picogpt status=0 elapsed=78s
+
+num docs:    micro=32033 femto=32033 pico=
+vocab size:  micro=27 femto=27 pico=
+num params:  micro=4192 femto=4192 pico=
+
+first loss:  micro=3.3660 femto=3.3660 pico=3.3660
+last loss:   micro=2.6497 femto=2.6497 pico=2.6497
+step count:  micro=1000 femto=1000 pico=1000
+sample count: micro=20 femto=20 pico=20
+
+femtogpt vs microgpt:
+- full log match: yes
+- loss trace match: yes
+- sample output match: yes
+
+picogpt vs microgpt:
+- full log match: no
+- loss trace match: yes
+- sample output match: yes
+
+Logs:
+- /Users/dwojcik/Dev/femto-gpt/run_results/20260215_134025/microgpt.log
+- /Users/dwojcik/Dev/femto-gpt/run_results/20260215_134025/femtogpt.log
+- /Users/dwojcik/Dev/femto-gpt/run_results/20260215_134025/picogpt.log
+Diffs:
+- /Users/dwojcik/Dev/femto-gpt/run_results/20260215_134025/losses.diff
+- /Users/dwojcik/Dev/femto-gpt/run_results/20260215_134025/samples.diff
+- /Users/dwojcik/Dev/femto-gpt/run_results/20260215_134025/pico_losses.diff
+- /Users/dwojcik/Dev/femto-gpt/run_results/20260215_134025/pico_samples.diff
+```
